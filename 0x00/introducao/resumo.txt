@@ -1,0 +1,14 @@
+Microsserviços são serviços pequenos, autônomos e implantáveis de forma independente, modelados em torno de capacidades de negócio e que se comunicam por contratos bem definidos.
+
+Visão geral: na arquitetura monolítica, o sistema é um único artefato (código e, em geral, banco compartilhado). É simples para começar, mas tende a acoplar módulos e a exigir que todo o sistema escale e seja implantado junto. Em microsserviços, o sistema é composto por vários serviços independentes, cada um com ciclo de vida próprio (deploy, versionamento, escala) e, idealmente, persistência própria. Ganha-se isolamento e flexibilidade ao custo de maior complexidade operacional.
+
+Benefícios (exemplos):
+1) Escalabilidade granular: apenas os serviços com demanda sobem recursos.
+2) Deploys independentes: times liberam mudanças sem travar o resto do sistema.
+3) Resiliência: falhas ficam isoladas; é possível degradar funcionalidades sem derrubar tudo.
+
+Comunicação entre microsserviços:
+• Síncrona: HTTP/REST ou gRPC, adequada para requisições diretas e respostas imediatas.
+• Assíncrona: filas/streams e eventos (mensageria), promovendo baixo acoplamento, elasticidade e processamento eventual.
+
+A adoção deve considerar domínio, maturidade operacional (observabilidade/CI-CD) e requisitos não funcionais.
